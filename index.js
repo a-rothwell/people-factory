@@ -5,14 +5,15 @@ function handelSubmit(ev){
     const name = f.personName.value
     const color = f.favoriteColor.value
     let CSScolor = color.replace(/\s/g,'');
-    const newParagraph = document.createElement("P");
-    const t = document.createTextNode(color + " is " + name + "\'s  favorite color");
-    newParagraph.appendChild(t);
+    const newParagraph = document.createElement("P")
+    const t = document.createTextNode(color + " is " + name + "\'s  favorite color")
+    newParagraph.appendChild(t)
     newParagraph.style.backgroundColor = CSScolor
     newParagraph.style.color = 'white'
     if(newParagraph.style.backgroundColor == ''){
         newParagraph.style.color = 'black'
     }
     document.body.appendChild(newParagraph);
+    document.body.appendChild(document.createElement("HR"))
 }
 personForm.addEventListener('submit', handelSubmit)
