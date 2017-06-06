@@ -11,9 +11,12 @@ function handelSubmit(ev){
     newParagraph.style.backgroundColor = CSScolor
     newParagraph.style.color = 'white'
     if(newParagraph.style.backgroundColor == ''){
-        newParagraph.style.color = 'black'
+        newParagraph.style.color = '#d3b'
     }
     document.body.appendChild(newParagraph);
     document.body.appendChild(document.createElement("HR"))
+
+    const details = document.querySelector('#details')
+    details.innerHTML = name
 }
 personForm.addEventListener('submit', handelSubmit)
